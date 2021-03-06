@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site_Master2_Page.master.cs" Inherits="AspDotNetProject.MasterPage.Site_Master2_Page" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <style>
+        .Menu1 {
+            float: right;
+            padding: 6px 7px 6px 4px;
+            background-color: none;
+            box-sizing: border-box;
+        }
+
+        #areaContainer {
+            background-color: #cdcacc;
+        }
+
+        .nav {
+            background-color: aqua;
+        }
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+
+            li:last-child {
+                border-right: none;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: #111;
+                }
+
+        .active {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+<ul style="text-align:right">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="../Pages/ObjectDataPage.aspx">Object Data</a></li>
+  <li><a href="../Pages/SQLDataSource.aspx">SQL Data</a></li>
+  <li><a href="../Report/viewReport.aspx">Report</a></li>
+</ul>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
